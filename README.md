@@ -65,7 +65,7 @@ Power On the System
 ## Access the Web Interface
 - Open the Serial Monitor to view the ESP32-CAM's IP address.
 - Access the web interface by entering the IP address in your browser:
-- http://<ESP32-CAM-IP>/upload
+- http://ESP32-CAM-IP/upload
 
 ## Classify and Sort Waste
 - Place an item in front of the camera.
