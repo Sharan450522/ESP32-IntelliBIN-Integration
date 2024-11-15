@@ -1,0 +1,78 @@
+Complete Pin Connections for ESP32-CAM Dustbin Automation
+
+1. Servo Motor Connections
+
+| Servo Motor   | Signal GPIO Pin | Power            | Ground             |
+|---------------|-----------------|------------------|--------------------|
+| Servo 1       | GPIO12          | External 5V      | Common Ground (GND)|
+| Servo 2       | GPIO13          | External 5V      | Common Ground (GND)|
+| Servo 3       | GPIO14          | External 5V      | Common Ground (GND)|
+| Servo 4       | GPIO15          | External 5V      | Common Ground (GND)|
+
+Important Notes:
+- Use an external 5V power supply for the servos to avoid overloading the ESP32-CAM.
+- Connect the servo GND to both the ESP32-CAM GND and the external power supply GND for a common ground.
+
+---
+
+2. ESP32-CAM Pin Connections
+
+Power and Communication:
+| Pin Name      | Function              | Connection                                      |
+|---------------|-----------------------|------------------------------------------------|
+| 5V            | Power Input           | Connect to a 5V source (USB-to-Serial or external). |
+| GND           | Ground                | Common ground for all components.              |
+| GPIO0         | Boot Mode Selection   | Connect to GND during programming. Leave unconnected for normal operation. |
+| GPIO1         | TX (UART)             | Connect to RX of USB-to-Serial adapter for programming. |
+| GPIO3         | RX (UART)             | Connect to TX of USB-to-Serial adapter for programming. |
+
+---
+
+3. Camera Module Connections
+
+The ESP32-CAM has predefined pins for the camera module. Ensure the camera is firmly attached to the slot on the ESP32-CAM board.
+
+| Signal         | GPIO Pin |
+|-----------------|----------|
+| XCLK           | GPIO0    |
+| PCLK           | GPIO22   |
+| VSYNC          | GPIO25   |
+| HREF           | GPIO23   |
+| D0             | GPIO5    |
+| D1             | GPIO18   |
+| D2             | GPIO19   |
+| D3             | GPIO21   |
+| D4             | GPIO36   |
+| D5             | GPIO39   |
+| D6             | GPIO34   |
+| D7             | GPIO35   |
+| SDA            | GPIO26   |
+| SCL            | GPIO27   |
+
+---
+
+4. USB-to-Serial Adapter Connections (for Programming)
+
+| USB-to-Serial Pin | ESP32-CAM Pin |
+|--------------------|---------------|
+| TX                 | GPIO3 (RX)   |
+| RX                 | GPIO1 (TX)   |
+| GND                | GND          |
+| 5V                 | 5V           |
+
+Programming Mode:
+- Connect GPIO0 to GND to enable programming mode.
+- After uploading the code, disconnect GPIO0 from GND and press the reset button on the ESP32-CAM to start the program.
+
+---
+
+5. Optional Capacitor for Power Stabilization
+
+To ensure stable power supply for servos, connect a 1000 µF capacitor across the 5V and GND lines of the external power supply.
+
+| Capacitor Pin | Connection  |
+|---------------|-------------|
+| Positive (+)  | 5V Line     |
+| Negative (-)  | GND Line    |
+
+---
