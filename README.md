@@ -1,5 +1,3 @@
-# ESP32-IntelliBIN-Integration\
-
 # ESP32-CAM Dustbin Automation
 
 An IoT-enabled smart dustbin system built with the ESP32-CAM module that uses machine learning to classify waste (e.g., paper, metal, food, etc.) and control servo motors to sort the waste into designated bins.
@@ -32,12 +30,3 @@ An IoT-enabled smart dustbin system built with the ESP32-CAM module that uses ma
   - [Edge Impulse Inferencing SDK](https://docs.edgeimpulse.com/)
   - WiFi Library (built-in)
   - ESP32 Camera Library (built-in)
-
----
-
-## Installation
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/<your-username>/ESP32-CAM-Dustbin-Automation.git
-cd ESP32-CAM-Dustbin-Automation
