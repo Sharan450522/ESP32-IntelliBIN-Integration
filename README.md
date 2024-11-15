@@ -34,7 +34,7 @@ An IoT-enabled smart dustbin system built with the ESP32-CAM module that uses ma
 
 ## Installation
 
-### Step 1: Clone the Repository
+Step 1: Clone the Repository
 ```bash
 git clone https://github.com/Sharan450522/ESP32-IntelliBIN-Integration.git
 cd ESP32-IntelliBIN-Integration
